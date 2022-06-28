@@ -2,11 +2,11 @@ let colors =  {"red":{"50":"#ffebee","100":"#ffcdd2","200":"#ef9a9a","300":"#e57
 
 let canvas = document.getElementById('canvas_display');
 
-//canvas.width = 1024;
-//canvas.height = 1024;
+canvas.width = 1024;
+canvas.height = 1024;
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+//canvas.width = window.innerWidth;
+//canvas.height = window.innerHeight;
 
 let context = canvas.getContext('2d');
 
@@ -1204,8 +1204,8 @@ function Background() {
     var color_theme_mutation_three = Math.floor(Math.random() * 19);
     var color_theme_mutation_four = Math.floor(Math.random() * 19);
 
-    for(var ii = 0; ii <= canvas.width; ii += xx) {
-        for(var i = 0; i <= canvas.height; i += xx) {
+    for(var ii = 0; ii <= 1024; ii += xx) {
+        for(var i = 0; i <= 1024; i += xx) {
             if(color_theme == 0) {
                 context.fillStyle = getRandomColor();
             }    
@@ -1820,8 +1820,11 @@ function updateCanvas() {
 
     Signature();
 }
-
+//var xxxxxx = 0;
 setInterval(function() {
+    //xxxxxx++;
     updateCanvas();
-    //downloadCanvas();
+    //if(xxxxxx <= 1000) {
+    //    downloadCanvas();
+    //}
 }, 1000);
