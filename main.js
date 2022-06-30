@@ -26,13 +26,13 @@ function Clear() {
 
 function drawTraingleDown() {
     var xx = -32; var yy = 0; var zz = 32; var count = 0;
-    var xxx = 0; var yyy = 32;
+    var xxx = 0; var yyy = 38;
 
-    var color_theme = Math.floor(Math.random() * 2);
+    var color_theme = Math.floor(Math.random() * 4);
     var color_theme_mutation_one = Math.floor(Math.random() * 19);
     var color_theme_mutation_two = Math.floor(Math.random() * 19);
-
-    console.log(color_theme + " " + color_theme_mutation_one + " " + color_theme_mutation_two)
+    var color_theme_mutation_three = Math.floor(Math.random() * 19);
+    var color_theme_mutation_four = Math.floor(Math.random() * 19);
 
     for(var x = 0; x <= 17; x++) {
         if(color_theme == 0) {
@@ -159,7 +159,425 @@ function drawTraingleDown() {
                 }
             }  
         }
-
+        if(color_theme == 2) {
+            var color_theme_mutation = Math.floor(Math.random() * 3);
+            if(color_theme_mutation == 0) {
+                if(color_theme_mutation_one == 0) {
+                    context.fillStyle = mColors.getRandomRedColor();
+                }
+                if(color_theme_mutation_one == 1) {
+                    context.fillStyle = mColors.getRandomPinkColor();
+                }
+                if(color_theme_mutation_one == 2) {
+                    context.fillStyle = mColors.getRandomPurpleColor();
+                }
+                if(color_theme_mutation_one == 3) {
+                    context.fillStyle = mColors.getRandomDeepPurpleColor();
+                }
+                if(color_theme_mutation_one == 4) {
+                    context.fillStyle = mColors.getRandomIndigoColor();
+                }
+                if(color_theme_mutation_one == 5) {
+                    context.fillStyle = mColors.getRandomBlueColor();
+                }
+                if(color_theme_mutation_one == 6) {
+                    context.fillStyle = mColors.getRandomLightBlueColor();
+                }
+                if(color_theme_mutation_one == 7) {
+                    context.fillStyle = mColors.getRandomCyanColor();
+                }
+                if(color_theme_mutation_one == 8) {
+                    context.fillStyle = mColors.getRandomTealColor();
+                }
+                if(color_theme_mutation_one == 9) {
+                    context.fillStyle = mColors.getRandomGreenColor();
+                }
+                if(color_theme_mutation_one == 10) {
+                    context.fillStyle = mColors.getRandomLightGreenColor();
+                }
+                if(color_theme_mutation_one == 11) {
+                    context.fillStyle = mColors.getRandomLimeColor();
+                }
+                if(color_theme_mutation_one == 12) {
+                    context.fillStyle = mColors.getRandomYellowColor();
+                }
+                if(color_theme_mutation_one == 13) {
+                    context.fillStyle = mColors.getRandomAmberColor();
+                }
+                if(color_theme_mutation_one == 14) {
+                    context.fillStyle = mColors.getRandomOrangeColor();
+                }
+                if(color_theme_mutation_one == 15) {
+                    context.fillStyle = mColors.getRandomDeepOrangeColor();
+                }
+                if(color_theme_mutation_one == 16) {
+                    context.fillStyle = mColors.getRandomBrownColor();
+                }
+                if(color_theme_mutation_one == 17) {
+                    context.fillStyle = mColors.getRandomGreyColor();
+                }
+                if(color_theme_mutation_one == 18) {
+                    context.fillStyle = mColors.getRandomBlueGreyColor();
+                }
+            }
+            if(color_theme_mutation == 1) {
+                if(color_theme_mutation_two == 0) {
+                    context.fillStyle = mColors.getRandomRedColor();
+                }
+                if(color_theme_mutation_two == 1) {
+                    context.fillStyle = mColors.getRandomPinkColor();
+                }
+                if(color_theme_mutation_two == 2) {
+                    context.fillStyle = mColors.getRandomPurpleColor();
+                }
+                if(color_theme_mutation_two == 3) {
+                    context.fillStyle = mColors.getRandomDeepPurpleColor();
+                }
+                if(color_theme_mutation_two == 4) {
+                    context.fillStyle = mColors.getRandomIndigoColor();
+                }
+                if(color_theme_mutation_two == 5) {
+                    context.fillStyle = mColors.getRandomBlueColor();
+                }
+                if(color_theme_mutation_two == 6) {
+                    context.fillStyle = mColors.getRandomLightBlueColor();
+                }
+                if(color_theme_mutation_two == 7) {
+                    context.fillStyle = mColors.getRandomCyanColor();
+                }
+                if(color_theme_mutation_two == 8) {
+                    context.fillStyle = mColors.getRandomTealColor();
+                }
+                if(color_theme_mutation_two == 9) {
+                    context.fillStyle = mColors.getRandomGreenColor();
+                }
+                if(color_theme_mutation_two == 10) {
+                    context.fillStyle = mColors.getRandomLightGreenColor();
+                }
+                if(color_theme_mutation_two == 11) {
+                    context.fillStyle = mColors.getRandomLimeColor();
+                }
+                if(color_theme_mutation_two == 12) {
+                    context.fillStyle = mColors.getRandomYellowColor();
+                }
+                if(color_theme_mutation_two == 13) {
+                    context.fillStyle = mColors.getRandomAmberColor();
+                }
+                if(color_theme_mutation_two == 14) {
+                    context.fillStyle = mColors.getRandomOrangeColor();
+                }
+                if(color_theme_mutation_two == 15) {
+                    context.fillStyle = mColors.getRandomDeepOrangeColor();
+                }
+                if(color_theme_mutation_two == 16) {
+                    context.fillStyle = mColors.getRandomBrownColor();
+                }
+                if(color_theme_mutation_two == 17) {
+                    context.fillStyle = mColors.getRandomGreyColor();
+                }
+                if(color_theme_mutation_two == 18) {
+                    context.fillStyle = mColors.getRandomBlueGreyColor();
+                }
+            }
+            if(color_theme_mutation == 2) {
+                if(color_theme_mutation_three == 0) {
+                    context.fillStyle = mColors.getRandomRedColor();
+                }
+                if(color_theme_mutation_three == 1) {
+                    context.fillStyle = mColors.getRandomPinkColor();
+                }
+                if(color_theme_mutation_three == 2) {
+                    context.fillStyle = mColors.getRandomPurpleColor();
+                }
+                if(color_theme_mutation_three == 3) {
+                    context.fillStyle = mColors.getRandomDeepPurpleColor();
+                }
+                if(color_theme_mutation_three == 4) {
+                    context.fillStyle = mColors.getRandomIndigoColor();
+                }
+                if(color_theme_mutation_three == 5) {
+                    context.fillStyle = mColors.getRandomBlueColor();
+                }
+                if(color_theme_mutation_three == 6) {
+                    context.fillStyle = mColors.getRandomLightBlueColor();
+                }
+                if(color_theme_mutation_three == 7) {
+                    context.fillStyle = mColors.getRandomCyanColor();
+                }
+                if(color_theme_mutation_three == 8) {
+                    context.fillStyle = mColors.getRandomTealColor();
+                }
+                if(color_theme_mutation_three == 9) {
+                    context.fillStyle = mColors.getRandomGreenColor();
+                }
+                if(color_theme_mutation_three == 10) {
+                    context.fillStyle = mColors.getRandomLightGreenColor();
+                }
+                if(color_theme_mutation_three == 11) {
+                    context.fillStyle = mColors.getRandomLimeColor();
+                }
+                if(color_theme_mutation_three == 12) {
+                    context.fillStyle = mColors.getRandomYellowColor();
+                }
+                if(color_theme_mutation_three == 13) {
+                    context.fillStyle = mColors.getRandomAmberColor();
+                }
+                if(color_theme_mutation_three == 14) {
+                    context.fillStyle = mColors.getRandomOrangeColor();
+                }
+                if(color_theme_mutation_three == 15) {
+                    context.fillStyle = mColors.getRandomDeepOrangeColor();
+                }
+                if(color_theme_mutation_three == 16) {
+                    context.fillStyle = mColors.getRandomBrownColor();
+                }
+                if(color_theme_mutation_three == 17) {
+                    context.fillStyle = mColors.getRandomGreyColor();
+                }
+                if(color_theme_mutation_three == 18) {
+                    context.fillStyle = mColors.getRandomBlueGreyColor();
+                }
+            }
+        }
+        if(color_theme == 3) {
+            var color_theme_mutation = Math.floor(Math.random() * 4);
+            if(color_theme_mutation == 0) {
+                if(color_theme_mutation_one == 0) {
+                    context.fillStyle = mColors.getRandomRedColor();
+                }
+                if(color_theme_mutation_one == 1) {
+                    context.fillStyle = mColors.getRandomPinkColor();
+                }
+                if(color_theme_mutation_one == 2) {
+                    context.fillStyle = mColors.getRandomPurpleColor();
+                }
+                if(color_theme_mutation_one == 3) {
+                    context.fillStyle = mColors.getRandomDeepPurpleColor();
+                }
+                if(color_theme_mutation_one == 4) {
+                    context.fillStyle = mColors.getRandomIndigoColor();
+                }
+                if(color_theme_mutation_one == 5) {
+                    context.fillStyle = mColors.getRandomBlueColor();
+                }
+                if(color_theme_mutation_one == 6) {
+                    context.fillStyle = mColors.getRandomLightBlueColor();
+                }
+                if(color_theme_mutation_one == 7) {
+                    context.fillStyle = mColors.getRandomCyanColor();
+                }
+                if(color_theme_mutation_one == 8) {
+                    context.fillStyle = mColors.getRandomTealColor();
+                }
+                if(color_theme_mutation_one == 9) {
+                    context.fillStyle = mColors.getRandomGreenColor();
+                }
+                if(color_theme_mutation_one == 10) {
+                    context.fillStyle = mColors.getRandomLightGreenColor();
+                }
+                if(color_theme_mutation_one == 11) {
+                    context.fillStyle = mColors.getRandomLimeColor();
+                }
+                if(color_theme_mutation_one == 12) {
+                    context.fillStyle = mColors.getRandomYellowColor();
+                }
+                if(color_theme_mutation_one == 13) {
+                    context.fillStyle = mColors.getRandomAmberColor();
+                }
+                if(color_theme_mutation_one == 14) {
+                    context.fillStyle = mColors.getRandomOrangeColor();
+                }
+                if(color_theme_mutation_one == 15) {
+                    context.fillStyle = mColors.getRandomDeepOrangeColor();
+                }
+                if(color_theme_mutation_one == 16) {
+                    context.fillStyle = mColors.getRandomBrownColor();
+                }
+                if(color_theme_mutation_one == 17) {
+                    context.fillStyle = mColors.getRandomGreyColor();
+                }
+                if(color_theme_mutation_one == 18) {
+                    context.fillStyle = mColors.getRandomBlueGreyColor();
+                }
+            }
+            if(color_theme_mutation == 1) {
+                if(color_theme_mutation_two == 0) {
+                    context.fillStyle = mColors.getRandomRedColor();
+                }
+                if(color_theme_mutation_two == 1) {
+                    context.fillStyle = mColors.getRandomPinkColor();
+                }
+                if(color_theme_mutation_two == 2) {
+                    context.fillStyle = mColors.getRandomPurpleColor();
+                }
+                if(color_theme_mutation_two == 3) {
+                    context.fillStyle = mColors.getRandomDeepPurpleColor();
+                }
+                if(color_theme_mutation_two == 4) {
+                    context.fillStyle = mColors.getRandomIndigoColor();
+                }
+                if(color_theme_mutation_two == 5) {
+                    context.fillStyle = mColors.getRandomBlueColor();
+                }
+                if(color_theme_mutation_two == 6) {
+                    context.fillStyle = mColors.getRandomLightBlueColor();
+                }
+                if(color_theme_mutation_two == 7) {
+                    context.fillStyle = mColors.getRandomCyanColor();
+                }
+                if(color_theme_mutation_two == 8) {
+                    context.fillStyle = mColors.getRandomTealColor();
+                }
+                if(color_theme_mutation_two == 9) {
+                    context.fillStyle = mColors.getRandomGreenColor();
+                }
+                if(color_theme_mutation_two == 10) {
+                    context.fillStyle = mColors.getRandomLightGreenColor();
+                }
+                if(color_theme_mutation_two == 11) {
+                    context.fillStyle = mColors.getRandomLimeColor();
+                }
+                if(color_theme_mutation_two == 12) {
+                    context.fillStyle = mColors.getRandomYellowColor();
+                }
+                if(color_theme_mutation_two == 13) {
+                    context.fillStyle = mColors.getRandomAmberColor();
+                }
+                if(color_theme_mutation_two == 14) {
+                    context.fillStyle = mColors.getRandomOrangeColor();
+                }
+                if(color_theme_mutation_two == 15) {
+                    context.fillStyle = mColors.getRandomDeepOrangeColor();
+                }
+                if(color_theme_mutation_two == 16) {
+                    context.fillStyle = mColors.getRandomBrownColor();
+                }
+                if(color_theme_mutation_two == 17) {
+                    context.fillStyle = mColors.getRandomGreyColor();
+                }
+                if(color_theme_mutation_two == 18) {
+                    context.fillStyle = mColors.getRandomBlueGreyColor();
+                }
+            }
+            if(color_theme_mutation == 2) {
+                if(color_theme_mutation_three == 0) {
+                    context.fillStyle = mColors.getRandomRedColor();
+                }
+                if(color_theme_mutation_three == 1) {
+                    context.fillStyle = mColors.getRandomPinkColor();
+                }
+                if(color_theme_mutation_three == 2) {
+                    context.fillStyle = mColors.getRandomPurpleColor();
+                }
+                if(color_theme_mutation_three == 3) {
+                    context.fillStyle = mColors.getRandomDeepPurpleColor();
+                }
+                if(color_theme_mutation_three == 4) {
+                    context.fillStyle = mColors.getRandomIndigoColor();
+                }
+                if(color_theme_mutation_three == 5) {
+                    context.fillStyle = mColors.getRandomBlueColor();
+                }
+                if(color_theme_mutation_three == 6) {
+                    context.fillStyle = mColors.getRandomLightBlueColor();
+                }
+                if(color_theme_mutation_three == 7) {
+                    context.fillStyle = mColors.getRandomCyanColor();
+                }
+                if(color_theme_mutation_three == 8) {
+                    context.fillStyle = mColors.getRandomTealColor();
+                }
+                if(color_theme_mutation_three == 9) {
+                    context.fillStyle = mColors.getRandomGreenColor();
+                }
+                if(color_theme_mutation_three == 10) {
+                    context.fillStyle = mColors.getRandomLightGreenColor();
+                }
+                if(color_theme_mutation_three == 11) {
+                    context.fillStyle = mColors.getRandomLimeColor();
+                }
+                if(color_theme_mutation_three == 12) {
+                    context.fillStyle = mColors.getRandomYellowColor();
+                }
+                if(color_theme_mutation_three == 13) {
+                    context.fillStyle = mColors.getRandomAmberColor();
+                }
+                if(color_theme_mutation_three == 14) {
+                    context.fillStyle = mColors.getRandomOrangeColor();
+                }
+                if(color_theme_mutation_three == 15) {
+                    context.fillStyle = mColors.getRandomDeepOrangeColor();
+                }
+                if(color_theme_mutation_three == 16) {
+                    context.fillStyle = mColors.getRandomBrownColor();
+                }
+                if(color_theme_mutation_three == 17) {
+                    context.fillStyle = mColors.getRandomGreyColor();
+                }
+                if(color_theme_mutation_three == 18) {
+                    context.fillStyle = mColors.getRandomBlueGreyColor();
+                }
+            }
+            if(color_theme_mutation == 3) {
+                if(color_theme_mutation_four == 0) {
+                    context.fillStyle = mColors.getRandomRedColor();
+                }
+                if(color_theme_mutation_four == 1) {
+                    context.fillStyle = mColors.getRandomPinkColor();
+                }
+                if(color_theme_mutation_four == 2) {
+                    context.fillStyle = mColors.getRandomPurpleColor();
+                }
+                if(color_theme_mutation_four == 3) {
+                    context.fillStyle = mColors.getRandomDeepPurpleColor();
+                }
+                if(color_theme_mutation_four == 4) {
+                    context.fillStyle = mColors.getRandomIndigoColor();
+                }
+                if(color_theme_mutation_four == 5) {
+                    context.fillStyle = mColors.getRandomBlueColor();
+                }
+                if(color_theme_mutation_four == 6) {
+                    context.fillStyle = mColors.getRandomLightBlueColor();
+                }
+                if(color_theme_mutation_four == 7) {
+                    context.fillStyle = mColors.getRandomCyanColor();
+                }
+                if(color_theme_mutation_four == 8) {
+                    context.fillStyle = mColors.getRandomTealColor();
+                }
+                if(color_theme_mutation_four == 9) {
+                    context.fillStyle = mColors.getRandomGreenColor();
+                }
+                if(color_theme_mutation_four == 10) {
+                    context.fillStyle = mColors.getRandomLightGreenColor();
+                }
+                if(color_theme_mutation_four == 11) {
+                    context.fillStyle = mColors.getRandomLimeColor();
+                }
+                if(color_theme_mutation_four == 12) {
+                    context.fillStyle = mColors.getRandomYellowColor();
+                }
+                if(color_theme_mutation_four == 13) {
+                    context.fillStyle = mColors.getRandomAmberColor();
+                }
+                if(color_theme_mutation_four == 14) {
+                    context.fillStyle = mColors.getRandomOrangeColor();
+                }
+                if(color_theme_mutation_four == 15) {
+                    context.fillStyle = mColors.getRandomDeepOrangeColor();
+                }
+                if(color_theme_mutation_four == 16) {
+                    context.fillStyle = mColors.getRandomBrownColor();
+                }
+                if(color_theme_mutation_four == 17) {
+                    context.fillStyle = mColors.getRandomGreyColor();
+                }
+                if(color_theme_mutation_four == 18) {
+                    context.fillStyle = mColors.getRandomBlueGreyColor();
+                }
+            }
+        }
         context.beginPath();
         context.moveTo(xx, xxx); // + 64
         context.lineTo(yy, yyy); // + 64
@@ -186,9 +604,11 @@ function drawTraingleUp() {
     var xx = 32; var yy = 64; var zz = 0; var count = 0;
     var xxx = 0; var yyy = 32;
 
-    var color_theme = Math.floor(Math.random() * 2);
+    var color_theme = Math.floor(Math.random() * 4);
     var color_theme_mutation_one = Math.floor(Math.random() * 19);
     var color_theme_mutation_two = Math.floor(Math.random() * 19);
+    var color_theme_mutation_three = Math.floor(Math.random() * 19);
+    var color_theme_mutation_four = Math.floor(Math.random() * 19);
 
     for(var x = 0; x <= 16; x++) {
         if(color_theme == 0) {
@@ -314,6 +734,425 @@ function drawTraingleUp() {
                     context.fillStyle = mColors.getRandomBlueGreyColor();
                 }
             }  
+        }
+        if(color_theme == 2) {
+            var color_theme_mutation = Math.floor(Math.random() * 3);
+            if(color_theme_mutation == 0) {
+                if(color_theme_mutation_one == 0) {
+                    context.fillStyle = mColors.getRandomRedColor();
+                }
+                if(color_theme_mutation_one == 1) {
+                    context.fillStyle = mColors.getRandomPinkColor();
+                }
+                if(color_theme_mutation_one == 2) {
+                    context.fillStyle = mColors.getRandomPurpleColor();
+                }
+                if(color_theme_mutation_one == 3) {
+                    context.fillStyle = mColors.getRandomDeepPurpleColor();
+                }
+                if(color_theme_mutation_one == 4) {
+                    context.fillStyle = mColors.getRandomIndigoColor();
+                }
+                if(color_theme_mutation_one == 5) {
+                    context.fillStyle = mColors.getRandomBlueColor();
+                }
+                if(color_theme_mutation_one == 6) {
+                    context.fillStyle = mColors.getRandomLightBlueColor();
+                }
+                if(color_theme_mutation_one == 7) {
+                    context.fillStyle = mColors.getRandomCyanColor();
+                }
+                if(color_theme_mutation_one == 8) {
+                    context.fillStyle = mColors.getRandomTealColor();
+                }
+                if(color_theme_mutation_one == 9) {
+                    context.fillStyle = mColors.getRandomGreenColor();
+                }
+                if(color_theme_mutation_one == 10) {
+                    context.fillStyle = mColors.getRandomLightGreenColor();
+                }
+                if(color_theme_mutation_one == 11) {
+                    context.fillStyle = mColors.getRandomLimeColor();
+                }
+                if(color_theme_mutation_one == 12) {
+                    context.fillStyle = mColors.getRandomYellowColor();
+                }
+                if(color_theme_mutation_one == 13) {
+                    context.fillStyle = mColors.getRandomAmberColor();
+                }
+                if(color_theme_mutation_one == 14) {
+                    context.fillStyle = mColors.getRandomOrangeColor();
+                }
+                if(color_theme_mutation_one == 15) {
+                    context.fillStyle = mColors.getRandomDeepOrangeColor();
+                }
+                if(color_theme_mutation_one == 16) {
+                    context.fillStyle = mColors.getRandomBrownColor();
+                }
+                if(color_theme_mutation_one == 17) {
+                    context.fillStyle = mColors.getRandomGreyColor();
+                }
+                if(color_theme_mutation_one == 18) {
+                    context.fillStyle = mColors.getRandomBlueGreyColor();
+                }
+            }
+            if(color_theme_mutation == 1) {
+                if(color_theme_mutation_two == 0) {
+                    context.fillStyle = mColors.getRandomRedColor();
+                }
+                if(color_theme_mutation_two == 1) {
+                    context.fillStyle = mColors.getRandomPinkColor();
+                }
+                if(color_theme_mutation_two == 2) {
+                    context.fillStyle = mColors.getRandomPurpleColor();
+                }
+                if(color_theme_mutation_two == 3) {
+                    context.fillStyle = mColors.getRandomDeepPurpleColor();
+                }
+                if(color_theme_mutation_two == 4) {
+                    context.fillStyle = mColors.getRandomIndigoColor();
+                }
+                if(color_theme_mutation_two == 5) {
+                    context.fillStyle = mColors.getRandomBlueColor();
+                }
+                if(color_theme_mutation_two == 6) {
+                    context.fillStyle = mColors.getRandomLightBlueColor();
+                }
+                if(color_theme_mutation_two == 7) {
+                    context.fillStyle = mColors.getRandomCyanColor();
+                }
+                if(color_theme_mutation_two == 8) {
+                    context.fillStyle = mColors.getRandomTealColor();
+                }
+                if(color_theme_mutation_two == 9) {
+                    context.fillStyle = mColors.getRandomGreenColor();
+                }
+                if(color_theme_mutation_two == 10) {
+                    context.fillStyle = mColors.getRandomLightGreenColor();
+                }
+                if(color_theme_mutation_two == 11) {
+                    context.fillStyle = mColors.getRandomLimeColor();
+                }
+                if(color_theme_mutation_two == 12) {
+                    context.fillStyle = mColors.getRandomYellowColor();
+                }
+                if(color_theme_mutation_two == 13) {
+                    context.fillStyle = mColors.getRandomAmberColor();
+                }
+                if(color_theme_mutation_two == 14) {
+                    context.fillStyle = mColors.getRandomOrangeColor();
+                }
+                if(color_theme_mutation_two == 15) {
+                    context.fillStyle = mColors.getRandomDeepOrangeColor();
+                }
+                if(color_theme_mutation_two == 16) {
+                    context.fillStyle = mColors.getRandomBrownColor();
+                }
+                if(color_theme_mutation_two == 17) {
+                    context.fillStyle = mColors.getRandomGreyColor();
+                }
+                if(color_theme_mutation_two == 18) {
+                    context.fillStyle = mColors.getRandomBlueGreyColor();
+                }
+            }
+            if(color_theme_mutation == 2) {
+                if(color_theme_mutation_three == 0) {
+                    context.fillStyle = mColors.getRandomRedColor();
+                }
+                if(color_theme_mutation_three == 1) {
+                    context.fillStyle = mColors.getRandomPinkColor();
+                }
+                if(color_theme_mutation_three == 2) {
+                    context.fillStyle = mColors.getRandomPurpleColor();
+                }
+                if(color_theme_mutation_three == 3) {
+                    context.fillStyle = mColors.getRandomDeepPurpleColor();
+                }
+                if(color_theme_mutation_three == 4) {
+                    context.fillStyle = mColors.getRandomIndigoColor();
+                }
+                if(color_theme_mutation_three == 5) {
+                    context.fillStyle = mColors.getRandomBlueColor();
+                }
+                if(color_theme_mutation_three == 6) {
+                    context.fillStyle = mColors.getRandomLightBlueColor();
+                }
+                if(color_theme_mutation_three == 7) {
+                    context.fillStyle = mColors.getRandomCyanColor();
+                }
+                if(color_theme_mutation_three == 8) {
+                    context.fillStyle = mColors.getRandomTealColor();
+                }
+                if(color_theme_mutation_three == 9) {
+                    context.fillStyle = mColors.getRandomGreenColor();
+                }
+                if(color_theme_mutation_three == 10) {
+                    context.fillStyle = mColors.getRandomLightGreenColor();
+                }
+                if(color_theme_mutation_three == 11) {
+                    context.fillStyle = mColors.getRandomLimeColor();
+                }
+                if(color_theme_mutation_three == 12) {
+                    context.fillStyle = mColors.getRandomYellowColor();
+                }
+                if(color_theme_mutation_three == 13) {
+                    context.fillStyle = mColors.getRandomAmberColor();
+                }
+                if(color_theme_mutation_three == 14) {
+                    context.fillStyle = mColors.getRandomOrangeColor();
+                }
+                if(color_theme_mutation_three == 15) {
+                    context.fillStyle = mColors.getRandomDeepOrangeColor();
+                }
+                if(color_theme_mutation_three == 16) {
+                    context.fillStyle = mColors.getRandomBrownColor();
+                }
+                if(color_theme_mutation_three == 17) {
+                    context.fillStyle = mColors.getRandomGreyColor();
+                }
+                if(color_theme_mutation_three == 18) {
+                    context.fillStyle = mColors.getRandomBlueGreyColor();
+                }
+            }
+        }
+        if(color_theme == 3) {
+            var color_theme_mutation = Math.floor(Math.random() * 4);
+            if(color_theme_mutation == 0) {
+                if(color_theme_mutation_one == 0) {
+                    context.fillStyle = mColors.getRandomRedColor();
+                }
+                if(color_theme_mutation_one == 1) {
+                    context.fillStyle = mColors.getRandomPinkColor();
+                }
+                if(color_theme_mutation_one == 2) {
+                    context.fillStyle = mColors.getRandomPurpleColor();
+                }
+                if(color_theme_mutation_one == 3) {
+                    context.fillStyle = mColors.getRandomDeepPurpleColor();
+                }
+                if(color_theme_mutation_one == 4) {
+                    context.fillStyle = mColors.getRandomIndigoColor();
+                }
+                if(color_theme_mutation_one == 5) {
+                    context.fillStyle = mColors.getRandomBlueColor();
+                }
+                if(color_theme_mutation_one == 6) {
+                    context.fillStyle = mColors.getRandomLightBlueColor();
+                }
+                if(color_theme_mutation_one == 7) {
+                    context.fillStyle = mColors.getRandomCyanColor();
+                }
+                if(color_theme_mutation_one == 8) {
+                    context.fillStyle = mColors.getRandomTealColor();
+                }
+                if(color_theme_mutation_one == 9) {
+                    context.fillStyle = mColors.getRandomGreenColor();
+                }
+                if(color_theme_mutation_one == 10) {
+                    context.fillStyle = mColors.getRandomLightGreenColor();
+                }
+                if(color_theme_mutation_one == 11) {
+                    context.fillStyle = mColors.getRandomLimeColor();
+                }
+                if(color_theme_mutation_one == 12) {
+                    context.fillStyle = mColors.getRandomYellowColor();
+                }
+                if(color_theme_mutation_one == 13) {
+                    context.fillStyle = mColors.getRandomAmberColor();
+                }
+                if(color_theme_mutation_one == 14) {
+                    context.fillStyle = mColors.getRandomOrangeColor();
+                }
+                if(color_theme_mutation_one == 15) {
+                    context.fillStyle = mColors.getRandomDeepOrangeColor();
+                }
+                if(color_theme_mutation_one == 16) {
+                    context.fillStyle = mColors.getRandomBrownColor();
+                }
+                if(color_theme_mutation_one == 17) {
+                    context.fillStyle = mColors.getRandomGreyColor();
+                }
+                if(color_theme_mutation_one == 18) {
+                    context.fillStyle = mColors.getRandomBlueGreyColor();
+                }
+            }
+            if(color_theme_mutation == 1) {
+                if(color_theme_mutation_two == 0) {
+                    context.fillStyle = mColors.getRandomRedColor();
+                }
+                if(color_theme_mutation_two == 1) {
+                    context.fillStyle = mColors.getRandomPinkColor();
+                }
+                if(color_theme_mutation_two == 2) {
+                    context.fillStyle = mColors.getRandomPurpleColor();
+                }
+                if(color_theme_mutation_two == 3) {
+                    context.fillStyle = mColors.getRandomDeepPurpleColor();
+                }
+                if(color_theme_mutation_two == 4) {
+                    context.fillStyle = mColors.getRandomIndigoColor();
+                }
+                if(color_theme_mutation_two == 5) {
+                    context.fillStyle = mColors.getRandomBlueColor();
+                }
+                if(color_theme_mutation_two == 6) {
+                    context.fillStyle = mColors.getRandomLightBlueColor();
+                }
+                if(color_theme_mutation_two == 7) {
+                    context.fillStyle = mColors.getRandomCyanColor();
+                }
+                if(color_theme_mutation_two == 8) {
+                    context.fillStyle = mColors.getRandomTealColor();
+                }
+                if(color_theme_mutation_two == 9) {
+                    context.fillStyle = mColors.getRandomGreenColor();
+                }
+                if(color_theme_mutation_two == 10) {
+                    context.fillStyle = mColors.getRandomLightGreenColor();
+                }
+                if(color_theme_mutation_two == 11) {
+                    context.fillStyle = mColors.getRandomLimeColor();
+                }
+                if(color_theme_mutation_two == 12) {
+                    context.fillStyle = mColors.getRandomYellowColor();
+                }
+                if(color_theme_mutation_two == 13) {
+                    context.fillStyle = mColors.getRandomAmberColor();
+                }
+                if(color_theme_mutation_two == 14) {
+                    context.fillStyle = mColors.getRandomOrangeColor();
+                }
+                if(color_theme_mutation_two == 15) {
+                    context.fillStyle = mColors.getRandomDeepOrangeColor();
+                }
+                if(color_theme_mutation_two == 16) {
+                    context.fillStyle = mColors.getRandomBrownColor();
+                }
+                if(color_theme_mutation_two == 17) {
+                    context.fillStyle = mColors.getRandomGreyColor();
+                }
+                if(color_theme_mutation_two == 18) {
+                    context.fillStyle = mColors.getRandomBlueGreyColor();
+                }
+            }
+            if(color_theme_mutation == 2) {
+                if(color_theme_mutation_three == 0) {
+                    context.fillStyle = mColors.getRandomRedColor();
+                }
+                if(color_theme_mutation_three == 1) {
+                    context.fillStyle = mColors.getRandomPinkColor();
+                }
+                if(color_theme_mutation_three == 2) {
+                    context.fillStyle = mColors.getRandomPurpleColor();
+                }
+                if(color_theme_mutation_three == 3) {
+                    context.fillStyle = mColors.getRandomDeepPurpleColor();
+                }
+                if(color_theme_mutation_three == 4) {
+                    context.fillStyle = mColors.getRandomIndigoColor();
+                }
+                if(color_theme_mutation_three == 5) {
+                    context.fillStyle = mColors.getRandomBlueColor();
+                }
+                if(color_theme_mutation_three == 6) {
+                    context.fillStyle = mColors.getRandomLightBlueColor();
+                }
+                if(color_theme_mutation_three == 7) {
+                    context.fillStyle = mColors.getRandomCyanColor();
+                }
+                if(color_theme_mutation_three == 8) {
+                    context.fillStyle = mColors.getRandomTealColor();
+                }
+                if(color_theme_mutation_three == 9) {
+                    context.fillStyle = mColors.getRandomGreenColor();
+                }
+                if(color_theme_mutation_three == 10) {
+                    context.fillStyle = mColors.getRandomLightGreenColor();
+                }
+                if(color_theme_mutation_three == 11) {
+                    context.fillStyle = mColors.getRandomLimeColor();
+                }
+                if(color_theme_mutation_three == 12) {
+                    context.fillStyle = mColors.getRandomYellowColor();
+                }
+                if(color_theme_mutation_three == 13) {
+                    context.fillStyle = mColors.getRandomAmberColor();
+                }
+                if(color_theme_mutation_three == 14) {
+                    context.fillStyle = mColors.getRandomOrangeColor();
+                }
+                if(color_theme_mutation_three == 15) {
+                    context.fillStyle = mColors.getRandomDeepOrangeColor();
+                }
+                if(color_theme_mutation_three == 16) {
+                    context.fillStyle = mColors.getRandomBrownColor();
+                }
+                if(color_theme_mutation_three == 17) {
+                    context.fillStyle = mColors.getRandomGreyColor();
+                }
+                if(color_theme_mutation_three == 18) {
+                    context.fillStyle = mColors.getRandomBlueGreyColor();
+                }
+            }
+            if(color_theme_mutation == 3) {
+                if(color_theme_mutation_four == 0) {
+                    context.fillStyle = mColors.getRandomRedColor();
+                }
+                if(color_theme_mutation_four == 1) {
+                    context.fillStyle = mColors.getRandomPinkColor();
+                }
+                if(color_theme_mutation_four == 2) {
+                    context.fillStyle = mColors.getRandomPurpleColor();
+                }
+                if(color_theme_mutation_four == 3) {
+                    context.fillStyle = mColors.getRandomDeepPurpleColor();
+                }
+                if(color_theme_mutation_four == 4) {
+                    context.fillStyle = mColors.getRandomIndigoColor();
+                }
+                if(color_theme_mutation_four == 5) {
+                    context.fillStyle = mColors.getRandomBlueColor();
+                }
+                if(color_theme_mutation_four == 6) {
+                    context.fillStyle = mColors.getRandomLightBlueColor();
+                }
+                if(color_theme_mutation_four == 7) {
+                    context.fillStyle = mColors.getRandomCyanColor();
+                }
+                if(color_theme_mutation_four == 8) {
+                    context.fillStyle = mColors.getRandomTealColor();
+                }
+                if(color_theme_mutation_four == 9) {
+                    context.fillStyle = mColors.getRandomGreenColor();
+                }
+                if(color_theme_mutation_four == 10) {
+                    context.fillStyle = mColors.getRandomLightGreenColor();
+                }
+                if(color_theme_mutation_four == 11) {
+                    context.fillStyle = mColors.getRandomLimeColor();
+                }
+                if(color_theme_mutation_four == 12) {
+                    context.fillStyle = mColors.getRandomYellowColor();
+                }
+                if(color_theme_mutation_four == 13) {
+                    context.fillStyle = mColors.getRandomAmberColor();
+                }
+                if(color_theme_mutation_four == 14) {
+                    context.fillStyle = mColors.getRandomOrangeColor();
+                }
+                if(color_theme_mutation_four == 15) {
+                    context.fillStyle = mColors.getRandomDeepOrangeColor();
+                }
+                if(color_theme_mutation_four == 16) {
+                    context.fillStyle = mColors.getRandomBrownColor();
+                }
+                if(color_theme_mutation_four == 17) {
+                    context.fillStyle = mColors.getRandomGreyColor();
+                }
+                if(color_theme_mutation_four == 18) {
+                    context.fillStyle = mColors.getRandomBlueGreyColor();
+                }
+            }
         }
         context.beginPath();
         context.moveTo(xx, xxx); // + 64
@@ -971,19 +1810,25 @@ function updateCanvas() {
 
     spice = Math.floor(Math.random() * (Math.random() * 99999999));
 
+    var displayThis = Math.floor(Math.random() * 2);
+
     Clear();
     
-    //Background();
+    if(displayThis == 0) {
+        Background();
+        Signature();
+    }
 
-    drawTraingleDown();
-
-    drawTraingleUp();
-
-    Signature();
+    if(displayThis == 1) {
+        context.fillStyle = "#eeeeee"
+        context.fillRect(0, 0, 1024, 1024);
+        drawTraingleDown();
+        drawTraingleUp();
+        Signature();
+    }
 }
 
 setInterval(function() {
     updateCanvas();
-    
     //downloadCanvas();
 }, 1000);
