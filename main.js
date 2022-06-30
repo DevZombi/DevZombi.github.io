@@ -24,6 +24,44 @@ function Clear() {
     context.fillRect(0, 0, 1024, 1024);
 }
 
+function drawTraingle() {
+    var xx = 32; var yy = 64; var zz = 0; var count = 0;
+    var xxx = 0; var yyy = 32;
+    for(var x = 0; x <= 16; x++) {
+        context.fillStyle = mColors.getRandomColor();
+        context.beginPath();
+        context.moveTo(xx, xxx); // + 64
+        context.lineTo(yy, yyy); // + 64
+        context.lineTo(zz, yyy); // + 64
+        context.closePath();
+        context.fill();
+        
+        xx = xx + 64;
+        yy = yy + 64;
+        zz = zz + 64;
+
+        if(x >= 16) {
+            console.log(x);
+            xxx = xxx + 32; yyy = yyy + 32;
+            xx = 32; yy = 64; zz = 0; x =0;
+            count = count + 1;
+            if(count == 32) {
+                return
+            }
+        }
+    }
+
+    /*
+        context.fillStyle = mColors.getRandomColor();
+        context.beginPath();
+        context.moveTo(96, 0);
+        context.lineTo(128, 32);
+        context.lineTo(64, 32);
+        context.closePath();
+        context.fill();
+        */
+}
+
 function Background() {
     var temp_roll = Math.floor(Math.random() * 3);
     if(temp_roll == 0) {
@@ -661,10 +699,13 @@ function updateCanvas() {
     
     Background();
 
+    drawTraingle();
+
     Signature();
 }
 
 setInterval(function() {
     updateCanvas();
-    downloadCanvas();
+    
+    //downloadCanvas();
 }, 1000);
