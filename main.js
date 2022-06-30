@@ -28,7 +28,7 @@ function drawTraingleDown() {
     var xx = -32; var yy = 0; var zz = 32; var count = 0;
     var xxx = 0; var yyy = 32;
 
-    var color_theme = Math.floor(Math.random() * 4);
+    var color_theme = Math.floor(Math.random() * 2);
     var color_theme_mutation_one = Math.floor(Math.random() * 19);
     var color_theme_mutation_two = Math.floor(Math.random() * 19);
 
@@ -186,7 +186,7 @@ function drawTraingleUp() {
     var xx = 32; var yy = 64; var zz = 0; var count = 0;
     var xxx = 0; var yyy = 32;
 
-    var color_theme = Math.floor(Math.random() * 4);
+    var color_theme = Math.floor(Math.random() * 2);
     var color_theme_mutation_one = Math.floor(Math.random() * 19);
     var color_theme_mutation_two = Math.floor(Math.random() * 19);
 
