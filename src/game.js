@@ -108,13 +108,13 @@ let btNewGame = new Button("New Game", (canvas.width / 2), (canvas.height / 2) +
 var txCount = new Text((canvas.width / 2), + 100, app_white, gfx);
 
 
-var txTitleName = new Text((canvas.width / 2), (canvas.height / 2), app_white, gfx);
-var txTitleMental = new Text((canvas.width / 2), (canvas.height / 2) + 85, app_white, gfx);
-var stMental = new Status((canvas.width / 2), (canvas.height / 2) + 100, 165, 30, secodnary_dark_color,secondary_light_color, gfx);
-var txTitlePhysical = new Text((canvas.width / 2), (canvas.height / 2) + 155, app_white, gfx);
-var stPhysical = new Status((canvas.width / 2), (canvas.height / 2) + 170, 165, 30, secodnary_dark_color,secondary_light_color, gfx);
-var txTitleMorality = new Text((canvas.width / 2), (canvas.height / 2) + 215, app_white, gfx);
-var stMorality = new Status((canvas.width / 2), (canvas.height / 2) + 230, 165, 30, secodnary_dark_color,secondary_light_color, gfx);
+var txTitleName = new Text((canvas.width / 2), (canvas.height / 2) - 30, app_white, gfx);
+var txTitleMental = new Text((canvas.width / 2), (canvas.height / 2) + 15, app_white, gfx);
+var stMental = new Status((canvas.width / 2), (canvas.height / 2) + 30, 170, 35, secodnary_dark_color,secondary_light_color, gfx);
+var txTitlePhysical = new Text((canvas.width / 2), (canvas.height / 2) + 85, app_white, gfx);
+var stPhysical = new Status((canvas.width / 2), (canvas.height / 2) + 100, 170, 35, secodnary_dark_color,secondary_light_color, gfx);
+var txTitleMorality = new Text((canvas.width / 2), (canvas.height / 2) + 155, app_white, gfx);
+var stMorality = new Status((canvas.width / 2), (canvas.height / 2) + 170, 170, 35, secodnary_dark_color,secondary_light_color, gfx);
 
 class Game {
 
