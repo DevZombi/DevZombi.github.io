@@ -35,8 +35,8 @@ var isMobile = {
 };
 let canvas = document.getElementById("game_canvas");
 if(isMobile.any()){
-    canvas.width = window.innerWidth - 10;
-    canvas.height = window.innerHeight - 10;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 } else {
     if((window.innerWidth - 100) > 600) {
         canvas.width = 500;
