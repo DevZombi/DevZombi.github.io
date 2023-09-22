@@ -113,10 +113,13 @@ var txCount = new Text((canvas.width / 2), + 100, app_white, gfx);
 
 var txTitleName = new Text((canvas.width / 2), (canvas.height / 2) - 30, app_white, gfx);
 var txTitleMental = new Text((canvas.width / 2), (canvas.height / 2) + 15, app_white, gfx);
+var txEmojiOne = new Text((canvas.width / 2), (canvas.height / 2) + 48, app_white, gfx);
 var stMental = new Status((canvas.width / 2), (canvas.height / 2) + 30, 170, 35, secodnary_dark_color,secondary_light_color, gfx);
 var txTitlePhysical = new Text((canvas.width / 2), (canvas.height / 2) + 85, app_white, gfx);
+var txEmojiTwo = new Text((canvas.width / 2), (canvas.height / 2) + 118, app_white, gfx);
 var stPhysical = new Status((canvas.width / 2), (canvas.height / 2) + 100, 170, 35, secodnary_dark_color,secondary_light_color, gfx);
 var txTitleMorality = new Text((canvas.width / 2), (canvas.height / 2) + 155, app_white, gfx);
+var txEmojiThree = new Text((canvas.width / 2), (canvas.height / 2) + 188, app_white, gfx);
 var stMorality = new Status((canvas.width / 2), (canvas.height / 2) + 170, 170, 35, secodnary_dark_color,secondary_light_color, gfx);
 
 class Game {
@@ -150,10 +153,13 @@ class Game {
         txTitleName.draw(name);
 
         txTitleMental.draw('Mental Health');
+        txEmojiOne.draw('😭                                     😃');
         stMental.draw(mental);
         txTitlePhysical.draw('Physical Health');
+        txEmojiTwo.draw('🫨                                     💪');
         stPhysical.draw(physical);
         txTitleMorality.draw('Morality');
+        txEmojiThree.draw('😈                                     😇');
         stMorality.draw(morality);
 
         btQuit.draw();
