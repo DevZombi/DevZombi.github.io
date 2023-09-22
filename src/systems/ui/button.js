@@ -28,7 +28,7 @@ class Button  {
             this.roundRectBackground(this.x - ((this.text_width + 20) / 2), this.y - (this.text_height + 35 / 2), this.ctx.measureText(this.text).width + 20, this.text_height + 20, 15, this.background_dark_color);
             this.roundRectBorder(this.x - ((this.text_width + 20) / 2), this.y - (this.text_height + 35 / 2), this.ctx.measureText(this.text).width + 20, this.text_height + 20, 15, this.border_color);
             this.ctx.fillStyle = this.text_color;
-            this.ctx.font = "20px Roboto";
+            this.ctx.font = "bold 20px Roboto";
             this.ctx.fillText(this.text, this.x - (this.text_width / 2), this.y - (this.text_height / 2));
         } else {
             this.count = 0;
@@ -37,7 +37,7 @@ class Button  {
             this.roundRectBackground(this.x - ((this.text_width + 20) / 2), this.y - (this.text_height + 35 / 2), this.ctx.measureText(this.text).width + 20, this.text_height + 20, 15, this.background_color);
             this.roundRectBorder(this.x - ((this.text_width + 20) / 2), this.y - (this.text_height + 35 / 2), this.ctx.measureText(this.text).width + 20, this.text_height + 20, 15, this.border_color);
             this.ctx.fillStyle = this.text_color;
-            this.ctx.font = "20px Roboto";
+            this.ctx.font = "bold 20px Roboto";
             this.ctx.fillText(this.text, this.x - (this.text_width / 2), this.y - (this.text_height / 2));
         }
     }    
