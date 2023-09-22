@@ -39,7 +39,7 @@ if(isMobile.any()){
     canvas.height = window.innerHeight;
 } else {
     if((window.innerWidth - 100) > 600) {
-        canvas.width = 500;
+        canvas.width = 400;
     } else {
         canvas.width = window.innerWidth - 100;
     }
@@ -62,16 +62,19 @@ let app_black = "#292929";
 
 let background = new BackgroundColor(primary_dark_color, 1.0,gfx);
 
-var taskLoaded = false;
+var taskLoaded = true;
 var taskSelect = false;
-var taskIdle = true;
+var taskIdle = false;
 
 var newgame = true;
 var profile = false;
 var task = false;
 
 var count = 0; var mental = 5; var physical = 5; var morality = 5; var name = "npc test";
-let btClicker = new Button("Click", (canvas.width / 2), canvas.height - 40, app_white, primary_light_color, primary_dark_color, app_white, gfx, input, () => { count = Number(count) + 1; });
+let btClicker = new Button("Click", (canvas.width / 2), canvas.height - 40, app_white, primary_light_color, primary_dark_color, app_white, gfx, input, () => { 
+    var clickAdd = Number(mental) + Number(physical);
+    count = Number(count) + Number(clickAdd); 
+});
 let btStartTask = new Button("Start Task", (canvas.width / 2), canvas.height - 40, app_white, primary_light_color, primary_dark_color, app_white, gfx, input, () => { });
 let btSelectTask = new Button("Select Task", (canvas.width / 2), canvas.height - 40, app_white, primary_light_color, primary_dark_color, app_white, gfx, input, () => { taskIdle = false; taskSelect = true; });
 
@@ -84,8 +87,8 @@ function randomInteger(min, max) {
 return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-var first = ['Big','Don','Miss','Lil\'','Captain','Sentient','King','Hostile','Happy'];
-var middle = ['Slimmy','Precious','Special','Salami','Stress','Friendly'];
+var first = ['Keiser','President','Big','Don','Miss','Lil\'','Captain','Sentient','King','Hostile','Happy'];
+var middle = ['Slimmy','Precious','Special','Salami','Stress','Friendly','Hot'];
 var last = ['Johny','Susan','Workman','Sam','Mary','Pedro','Pepe','Linda','Ram','Computer'];
 
 //newgame scene
