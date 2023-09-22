@@ -38,7 +38,12 @@ if(isMobile.any()){
     canvas.width = window.innerWidth - 10;
     canvas.height = window.innerHeight - 10;
 } else {
-    canvas.width = window.innerWidth - 100;
+    if((window.innerWidth - 100) > 600) {
+        canvas.width = 500;
+    } else {
+        canvas.width = window.innerWidth - 100;
+    }
+    
     canvas.height = window.innerHeight - 100;
 }
 
@@ -47,31 +52,69 @@ let input = new Controls(canvas.width, canvas.height);
 
 let mColors = new MaterialColors();
 
-let background = new BackgroundColor(mColors.blue_800(), 1.0,gfx);
+//game pallete for ui
+let primary_light_color = "#512B81";
+let primary_dark_color = "#35155D";
+let secondary_light_color ="#8CABFF";
+let secodnary_dark_color = "#4477CE";
+let app_white = "#eee";
+let app_black = "#292929";
+
+let background = new BackgroundColor(primary_dark_color, 1.0,gfx);
 
 var taskLoaded = false;
 var taskSelect = false;
-var taskIdle = false;
+var taskIdle = true;
 
 var newgame = true;
 var profile = false;
 var task = false;
 
-var count = 0;
-let btClicker = new Button("Click", (canvas.width / 2), canvas.height - 40, mColors.gray_200(), mColors.blue_600(), mColors.blue_800(), mColors.blue_200(), gfx, input, () => { count = Number(count) + 1; });
-let btStartTask = new Button("Start Task", (canvas.width / 2), canvas.height - 40, mColors.gray_200(), mColors.red_600(), mColors.red_800(), mColors.red_200(), gfx, input, () => { });
-let btSelectTask = new Button("Select Task", (canvas.width / 2), canvas.height - 40, mColors.gray_200(), mColors.green_600(), mColors.green_800(), mColors.green_200(), gfx, input, () => { taskIdle = false; taskSelect = true; });
+var count = 0; var mental = 5; var physical = 5; var morality = 5; var name = "npc test";
+let btClicker = new Button("Click", (canvas.width / 2), canvas.height - 40, app_white, primary_light_color, primary_dark_color, app_white, gfx, input, () => { count = Number(count) + 1; });
+let btStartTask = new Button("Start Task", (canvas.width / 2), canvas.height - 40, app_white, primary_light_color, primary_dark_color, app_white, gfx, input, () => { });
+let btSelectTask = new Button("Select Task", (canvas.width / 2), canvas.height - 40, app_white, primary_light_color, primary_dark_color, app_white, gfx, input, () => { taskIdle = false; taskSelect = true; });
 
-let btQuit = new Button("Quit", ((canvas.width / 2)/2) * 3, canvas.height - 40, mColors.gray_200(), mColors.red_600(), mColors.red_800(), mColors.red_200(), gfx, input, () => { profile = false; newgame = true; });
-let btShop = new Button("Shop", (canvas.width / 2), canvas.height - 40, mColors.gray_200(), mColors.blue_600(), mColors.blue_800(), mColors.blue_200(), gfx, input, () => { });
-let btTask = new Button("Tasks", (canvas.width / 2) / 2, canvas.height - 40, mColors.gray_200(), mColors.green_600(), mColors.green_800(), mColors.green_200(), gfx, input, () => { });
+let btQuit = new Button("Quit", ((canvas.width / 2)/2) * 3, canvas.height - 40, app_white, primary_light_color, primary_dark_color, app_white, gfx, input, () => { profile = false; newgame = true; });
+let btShop = new Button("Shop", (canvas.width / 2), canvas.height - 40, app_white, primary_light_color, primary_dark_color, app_white, gfx, input, () => { });
+let btTask = new Button("Tasks", (canvas.width / 2) / 2, canvas.height - 40, app_white, primary_light_color, primary_dark_color, app_white, gfx, input, () => { profile = false; task = true; });
 
-let btNewGame = new Button("New Game", (canvas.width / 2), canvas.height - 40, mColors.gray_200(), mColors.blue_600(), mColors.blue_800(), mColors.blue_200(), gfx, input, () => { newgame = false; profile = true;});
 
-let txTitle = new Text((canvas.width / 2), + 80, mColors.gray_200(), gfx);
-var txCount = new Text((canvas.width / 2), + 100, mColors.gray_200(), gfx);
+function randomInteger(min, max) {
+return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-var stMental = new Status((canvas.width / 2), 50, mColors.gray_100(), gfx);
+var first = ['Big','Don','Miss','Lil\'','Captain','Sentient','King','Hostile','Happy'];
+var middle = ['Slimmy','Precious','Special','Salami','Stress','Friendly'];
+var last = ['Johny','Susan','Workman','Sam','Mary','Pedro','Pepe','Linda','Ram','Computer'];
+
+//newgame scene
+let txTitle = new Text((canvas.width / 2), (canvas.height / 2) + 180, app_white, gfx);
+let btNewGame = new Button("New Game", (canvas.width / 2), (canvas.height / 2) + 240, app_white, primary_light_color, primary_dark_color, app_white, gfx, input, () => { 
+    newgame = false; 
+    profile = true;
+    mental = randomInteger(2,5);
+    physical = randomInteger(2,5);
+    morality = randomInteger(2,5);
+    if(mental == 2 & physical == 2 & morality == 2) {
+        name = 'HolyC Davis'
+    } else if(mental == 5 & physical == 5 & morality == 5) {
+        name = '🍀 🍀 🍀';
+    } else {
+        name = first[randomInteger(0,first.length - 1)] + ' ' + middle[randomInteger(0,middle.length - 1)] + ' ' + last[randomInteger(0,last.length - 1)];
+    }
+});
+
+var txCount = new Text((canvas.width / 2), + 100, app_white, gfx);
+
+
+var txTitleName = new Text((canvas.width / 2), (canvas.height / 2), app_white, gfx);
+var txTitleMental = new Text((canvas.width / 2), (canvas.height / 2) + 85, app_white, gfx);
+var stMental = new Status((canvas.width / 2), (canvas.height / 2) + 100, 165, 30, secodnary_dark_color,secondary_light_color, gfx);
+var txTitlePhysical = new Text((canvas.width / 2), (canvas.height / 2) + 155, app_white, gfx);
+var stPhysical = new Status((canvas.width / 2), (canvas.height / 2) + 170, 165, 30, secodnary_dark_color,secondary_light_color, gfx);
+var txTitleMorality = new Text((canvas.width / 2), (canvas.height / 2) + 215, app_white, gfx);
+var stMorality = new Status((canvas.width / 2), (canvas.height / 2) + 230, 165, 30, secodnary_dark_color,secondary_light_color, gfx);
 
 class Game {
 
@@ -95,11 +138,21 @@ class Game {
     } 
     
     newgameScene() {
-        stMental.draw();
+        txTitle.draw('Rouge Clicker');
         btNewGame.draw();
     }
 
     profileScene() {
+
+        txTitleName.draw(name);
+
+        txTitleMental.draw('Mental Health');
+        stMental.draw(mental);
+        txTitlePhysical.draw('Physical Health');
+        stPhysical.draw(physical);
+        txTitleMorality.draw('Morality');
+        stMorality.draw(morality);
+
         btQuit.draw();
         btShop.draw();
         btTask.draw();
