@@ -57,10 +57,11 @@ var last = ['Johny','Susan','Workman','Sam','Mary','Pedro','Pepe','Linda','Ram',
 
 //newgame scene
 var txTitle = new TextBuilder(gfx)
+    .setText('Rouge Clicker')
     .setLocation((gfx.getWidth() / 2), (gfx.getHeight() / 2) + 180)
-    .setSize("40px")
+    .setSize('40px')
     .setBold(true)
-    .setColor("#eee")
+    .setColor('#eee')
     .build()
 
 let btNewGame = new Button("New Game", (gfx.getWidth() / 2), (gfx.getHeight() / 2) + 240, app_white, primary_light_color, primary_dark_color, app_white, gfx, input, () => { 

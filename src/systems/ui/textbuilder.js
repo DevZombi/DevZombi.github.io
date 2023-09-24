@@ -8,6 +8,7 @@ class TextBuilder {
         this.font = "Roboto"
         this.bold = false
         this.italic = false
+        this.text = "text"
 
         this.gfx = gfx
     }
@@ -43,8 +44,13 @@ class TextBuilder {
         return this
     }
 
+    setText(text) {
+        this.text = text
+        return this
+    }
+
     build() {
-        return new Text(this.x, this.y, this.size, this.color, this.font, this.bold, this.italic, this.gfx);
+        return new Text(this.text, this.x, this.y, this.size, this.color, this.font, this.bold, this.italic, this.gfx);
     }
 }
 
