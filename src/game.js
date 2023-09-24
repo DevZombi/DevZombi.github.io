@@ -29,9 +29,9 @@ let app_black = "#292929";
 
 let background = new BackgroundColor(primary_dark_color, 1.0,gfx);
 
-var taskLoaded = false;
+var taskLoaded = true;
 var taskSelect = false;
-var taskIdle = true;
+var taskIdle = false;
 
 var newgame = true;
 var profile = false;
@@ -94,12 +94,14 @@ var stMorality = new Status((gfx.getWidth() / 2), (gfx.getHeight() / 2) + 230, 1
 
 //task scene
 var txCount = new TextBuilder(gfx)
-    .setLocation((gfx.getWidth() / 2), + 100)
+    .setText(count)
+    .setLocation((gfx.getWidth() / 2), +120)
     .setSize("20px")
     .setColor("#eee")
     .build()
 
 var txTaskTitle = new TextBuilder(gfx)
+    .setText('Test Mode')
     .setLocation((gfx.getWidth() / 2), + 100)
     .setSize("20px")
     .setColor("#eee")
@@ -114,8 +116,9 @@ class Game {
 
     taskScene() {
         if(taskLoaded) {
-            txTaskTitle.draw("Task Completion");
-            txCount.draw(count);
+            txTaskTitle.draw();
+            txCount.update(count)
+            txCount.draw();
             btClicker.draw();
         } 
         if(taskSelect) {
@@ -127,7 +130,7 @@ class Game {
     } 
     
     newgameScene() {
-        txTitle.draw('Rouge Clicker');
+        txTitle.draw();
         btNewGame.draw();
     }
 
