@@ -56,43 +56,43 @@ class Status {
         //bubble one
         var bubble_one_loc = [this.x - (((this.width / 6) / 2) + (this.width / 6) * 2) - 6, this.y - ((this.height - 5) / 2)];
         if(val > 0) {
-            this.roundRectBackground(bubble_one_loc[0],bubble_one_loc[1], this.width / 6 - 2 , this.height - 5, 15,this.accent_color);
+            this.roundRectBackground(bubble_one_loc[0],bubble_one_loc[1], this.width / 6 - 2 , this.height - 5, 10,this.accent_color);
         } else {
-            this.roundRectBackground(bubble_one_loc[0],bubble_one_loc[1], this.width / 6 - 2 , this.height - 5, 15,this.empty_color);
+            this.roundRectBackground(bubble_one_loc[0],bubble_one_loc[1], this.width / 6 - 2 , this.height - 5, 10,this.empty_color);
         }
-        this.roundRectBorder(bubble_one_loc[0],bubble_one_loc[1], this.width / 6 - 2 , this.height - 5, 15, this.border_color);
+        this.roundRectBorder(bubble_one_loc[0],bubble_one_loc[1], this.width / 6 - 2 , this.height - 5, 10, this.border_color);
         //bubble two
         var bubble_two_loc = [this.x - (((this.width / 6) / 2) + (this.width / 6) * 1) - 3, this.y - ((this.height - 5) / 2)];
         if(val > 1) {
-            this.roundRectBackground(bubble_two_loc[0],bubble_two_loc[1], this.width / 6 - 2 , this.height - 5, 15,this.accent_color);
+            this.roundRectBackground(bubble_two_loc[0],bubble_two_loc[1], this.width / 6 - 2 , this.height - 5, 10,this.accent_color);
         } else {
-            this.roundRectBackground(bubble_two_loc[0],bubble_two_loc[1], this.width / 6 - 2 , this.height - 5, 15,this.empty_color);
+            this.roundRectBackground(bubble_two_loc[0],bubble_two_loc[1], this.width / 6 - 2 , this.height - 5, 10,this.empty_color);
         }
-        this.roundRectBorder(bubble_two_loc[0],bubble_two_loc[1], this.width / 6 - 2 , this.height - 5, 15, this.border_color);
+        this.roundRectBorder(bubble_two_loc[0],bubble_two_loc[1], this.width / 6 - 2 , this.height - 5, 10, this.border_color);
         //bubble three
         var bubble_three_loc = [this.x - (((this.width / 6) / 2)), this.y - ((this.height - 5) / 2)];
         if(val > 2) {
-            this.roundRectBackground(bubble_three_loc[0],bubble_three_loc[1], this.width / 6 - 2 , this.height - 5, 15,this.accent_color);
+            this.roundRectBackground(bubble_three_loc[0],bubble_three_loc[1], this.width / 6 - 2 , this.height - 5, 10,this.accent_color);
         } else {
-            this.roundRectBackground(bubble_three_loc[0],bubble_three_loc[1], this.width / 6 - 2 , this.height - 5, 15,this.empty_color);
+            this.roundRectBackground(bubble_three_loc[0],bubble_three_loc[1], this.width / 6 - 2 , this.height - 5, 10,this.empty_color);
         }
-        this.roundRectBorder(bubble_three_loc[0],bubble_three_loc[1], this.width / 6 - 2 , this.height - 5, 15, this.border_color);
+        this.roundRectBorder(bubble_three_loc[0],bubble_three_loc[1], this.width / 6 - 2 , this.height - 5, 10, this.border_color);
         //bubble four
         var bubble_four_loc = [this.x - (((this.width / 6) / 2) - (this.width / 6) * 1) + 3, this.y - ((this.height - 5) / 2)];
         if(val > 3) {
-            this.roundRectBackground(bubble_four_loc[0],bubble_four_loc[1], this.width / 6 - 2 , this.height - 5, 15,this.accent_color);
+            this.roundRectBackground(bubble_four_loc[0],bubble_four_loc[1], this.width / 6 - 2 , this.height - 5, 10,this.accent_color);
         } else {
-            this.roundRectBackground(bubble_four_loc[0],bubble_four_loc[1], this.width / 6 - 2 , this.height - 5, 15,this.empty_color);
+            this.roundRectBackground(bubble_four_loc[0],bubble_four_loc[1], this.width / 6 - 2 , this.height - 5, 10,this.empty_color);
         }
-        this.roundRectBorder(bubble_four_loc[0],bubble_four_loc[1], this.width / 6 - 2 , this.height - 5, 15, this.border_color);
+        this.roundRectBorder(bubble_four_loc[0],bubble_four_loc[1], this.width / 6 - 2 , this.height - 5, 10, this.border_color);
         //bubble five
         var bubble_five_loc = [this.x - (((this.width / 6) / 2) - (this.width / 6) * 2) + 6, this.y - ((this.height - 5) / 2)];
         if(val > 4) {
-            this.roundRectBackground(bubble_five_loc[0],bubble_five_loc[1], this.width / 6 - 2 , this.height - 5, 15,this.accent_color);
+            this.roundRectBackground(bubble_five_loc[0],bubble_five_loc[1], this.width / 6 - 2 , this.height - 5, 10,this.accent_color);
         } else {
-            this.roundRectBackground(bubble_five_loc[0],bubble_five_loc[1], this.width / 6 - 2 , this.height - 5, 15,this.empty_color);
+            this.roundRectBackground(bubble_five_loc[0],bubble_five_loc[1], this.width / 6 - 2 , this.height - 5, 10,this.empty_color);
         }
-        this.roundRectBorder(bubble_five_loc[0],bubble_five_loc[1], this.width / 6 - 2 , this.height - 5, 15, this.border_color);
+        this.roundRectBorder(bubble_five_loc[0],bubble_five_loc[1], this.width / 6 - 2 , this.height - 5, 10, this.border_color);
         //bubble six
     }
 }
