@@ -1,18 +1,53 @@
 //2021-2022 samuel r rivera-bonilla
-class Graphics {
-    constructor(canvas, x, y) {
-        this.canvas = canvas;
-        this.ctx = this.canvas.getContext("2d");
-        this.x = x;
-        this.y = y;
-    }
 
+let canvas = "";
+
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+
+class Graphics {
+    constructor(ncanvas) {
+        canvas = document.getElementById(ncanvas);
+        if(isMobile.any()){
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        } else {
+            if((window.innerWidth - 100) > 600) {
+                canvas.width = 400;
+            } else {
+                canvas.width = window.innerWidth - 100;
+            }
+            canvas.height = window.innerHeight - 100;
+        }
+        this.ctx = canvas.getContext("2d");
+        this.x = canvas.width;
+        this.y = canvas.height;
+    }
+    
     getContext() {
         return this.ctx;
     }
 
     getCanvas() {
-        return this.canvas;
+        return canvas;
     }
 
     getX() {
@@ -23,8 +58,16 @@ class Graphics {
         return this.y;
     }
 
+    getWidth() {
+        return canvas.width;
+    }
+
+    getHeight() {
+        return canvas.height;
+    }
+
     clear() {
-        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.ctx.clearRect(0, 0, canvas.width, canvas.height);
     }
 }
 
