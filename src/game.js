@@ -15,8 +15,6 @@ import Status from './systems/ui/status.js';
 
 import TextBuilder from './systems/ui/textbuilder.js';
 
-
-
 let mColors = new MaterialColors();
 
 //game pallete for ui
@@ -38,7 +36,10 @@ var profile = false;
 var task = false;
 
 var count = 0; var mental = 5; var physical = 5; var morality = 5; var name = "npc test";
-let btClicker = new Button("Click", (gfx.getWidth() / 2), gfx.getHeight() - 40, app_white, primary_light_color, primary_dark_color, app_white, gfx, input, () => { count = Number(count) + 1; });
+let btClicker = new Button("Click", (gfx.getWidth() / 2), gfx.getHeight() - 40, app_white, primary_light_color, primary_dark_color, app_white, gfx, input, () => {
+    var clickAdd = Number(mental) + Number(physical);
+    count = Number(count) + Number(clickAdd); 
+});
 let btStartTask = new Button("Start Task", (gfx.getWidth() / 2), gfx.getHeight() - 40, app_white, primary_light_color, primary_dark_color, app_white, gfx, input, () => { });
 let btSelectTask = new Button("Select Task", (gfx.getWidth() / 2), gfx.getHeight() - 40, app_white, primary_light_color, primary_dark_color, app_white, gfx, input, () => { taskIdle = false; taskSelect = true; });
 
@@ -48,7 +49,26 @@ let btTask = new Button("Tasks", (gfx.getWidth() / 2) / 2, gfx.getHeight() - 40,
 
 
 function randomInteger(min, max) {
-return Math.floor(Math.random() * (max - min + 1)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function reRoll() {
+    newgame = false; 
+    profile = true;
+    mental = randomInteger(2,5);
+    physical = randomInteger(2,5);
+    morality = randomInteger(2,5);
+    btClicker.update(() => {
+        var clickAdd = Number(mental) + Number(physical);
+        count = Number(count) + Number(clickAdd); 
+    })
+    if(mental == 2 & physical == 2 & morality == 2) {
+        name = 'HolyC Davis'
+    } else if(mental == 5 & physical == 5 & morality == 5) {
+        name = '🍀 🍀 🍀';
+    } else {
+        name = first[randomInteger(0,first.length - 1)] + ' ' + middle[randomInteger(0,middle.length - 1)] + ' ' + last[randomInteger(0,last.length - 1)];
+    }
 }
 
 var first = ['Big','Don','Miss','Lil\'','Captain','Sentient','King','Hostile','Happy'];
@@ -60,23 +80,12 @@ var txTitle = new TextBuilder(gfx)
     .setText('Rouge Clicker')
     .setLocation((gfx.getWidth() / 2), (gfx.getHeight() / 2) + 180)
     .setSize('40px')
-    .setBold(true)
+    .setItalic(true)
     .setColor('#eee')
     .build()
 
 let btNewGame = new Button("New Game", (gfx.getWidth() / 2), (gfx.getHeight() / 2) + 240, app_white, primary_light_color, primary_dark_color, app_white, gfx, input, () => { 
-    newgame = false; 
-    profile = true;
-    mental = randomInteger(2,5);
-    physical = randomInteger(2,5);
-    morality = randomInteger(2,5);
-    if(mental == 2 & physical == 2 & morality == 2) {
-        name = 'HolyC Davis'
-    } else if(mental == 5 & physical == 5 & morality == 5) {
-        name = '🍀 🍀 🍀'
-    } else {
-        name = first[randomInteger(0,first.length - 1)] + ' ' + middle[randomInteger(0,middle.length - 1)] + ' ' + last[randomInteger(0,last.length - 1)];
-    }
+    reRoll()
 });
 
 //profile screen

@@ -17,6 +17,10 @@ class Button  {
         this.count = 0;
     }
 
+    update(callback) {
+        this.callback = callback
+    }
+
     draw() {
         if(this.isPressed() == true) {
             this.count += 1;
