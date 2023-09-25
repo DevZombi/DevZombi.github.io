@@ -1,4 +1,5 @@
-import Text from './text.js';
+import Text from '../elements/text.js'
+
 class TextBuilder {
     constructor(gfx) {
         this.x = 0

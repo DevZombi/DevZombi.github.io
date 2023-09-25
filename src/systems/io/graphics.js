@@ -40,6 +40,8 @@ class Graphics {
         this.ctx = canvas.getContext("2d");
         this.x = canvas.width;
         this.y = canvas.height;
+        this.color = '#eee';
+        this.opacitiy = 1.0;
     }
     
     getContext() {
@@ -66,8 +68,17 @@ class Graphics {
         return canvas.height;
     }
 
+    setBackground(color,opacity) {
+        this.color = color
+        this.opacity = opacity
+    }
+
     clear() {
         this.ctx.clearRect(0, 0, canvas.width, canvas.height);
+        this.ctx.fillStyle = this.color;
+        this.ctx.globalAlpha = this.opacitiy;
+        this.ctx.fillRect(0, 0, canvas.width, canvas.height);
+        this.ctx.globalAlpha = 1.0;
     }
 }
 
