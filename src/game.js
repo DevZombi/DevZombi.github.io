@@ -149,6 +149,14 @@ let btClicker = new Button('Click', (gfx.getWidth() / 2), gfx.getHeight() - 40, 
     count = Number(count) + Number(clickAdd)
 });
 
+function isFileImage(file) {
+    const acceptedImageTypes = ['image/gif', 'image/jpeg', 'image/png'];
+ 
+    return file && acceptedImageTypes.includes(file['type'])
+}
+
+var img = "../src/data/images/title.png"
+
 class Game {
 
     drawBackground() {
@@ -171,6 +179,9 @@ class Game {
     } 
     
     newgameScene() {
+        
+        console.log(isFileImage(img))
+        //gfx.getContext().drawImage('../title.png',10,10)
         txTitle.draw()
         btNewGame.draw()
     }
